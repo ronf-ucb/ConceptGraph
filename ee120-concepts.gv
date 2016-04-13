@@ -1,0 +1,24 @@
+digraph ee120_concepts {
+  node [fontsize=11]
+  LDECC -> impulse  [label="x(t) = \\delta(t)", lblstyle="below"];
+  LDECC -> FT  [label="x(t) = e^{j \\omega t}"]
+  
+  LTI -> impulse  [label="x(t) = \\delta(t)"]
+  LTI -> FT  [label="x(t) = e^{j \\omega t}", lblstyle="below=0.5cm"]
+
+  impulse -> FT [label=" * e^{j \\omega t}"]
+
+  RLC -> LDECC
+
+
+  node [texmode="verbatim"];
+  LTI [label="LTI"]
+  node [texmode="verbatim"];
+  LDECC  [label="LDECC"]
+  node [texmode="verbatim"];
+  RLC  [label="RLC, MKB"]
+  FT [label="H( j \\omega) e^{j \\omega t}"]
+  impulse  [label="h(t)"]
+  node [texmode="math"];
+  periodic [label="periodic ~~~ x(t) = \\Sigma a_k e^{j k \\omega_o t}"] 
+}
